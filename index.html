@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mikalto</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=
+        , initial-scale=1.0"
+        />
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://kit.fontawesome.com/f250873f9c.js"
+          crossorigin="anonymous"
+        ></script>
+      </head>
+      <body>
+        <section name="navbar" class="d-md-flex justify-content-around py-3">
+          <div class="d-flex">
+            <span class="px-md-3 fs-2 ps-4 ps-md-3">
+              MIKALTO <br />
+              <p class="fs-6">HOTELS AND RESORTS</p></span
+            >
+
+            <i class="fa-solid fa-bars hamburger d-md-none" id="menu-icon"></i>
+            <i
+              class="fa-solid fa-xmark hamburger d-md-none header-items"
+              id="close-icon"
+            ></i>
+          </div>
+
+          <div class="header-items justify-content-md-between mt-2 nav-link">
+            <ul class="d-md-flex list-unstyled">
+              <li class="my-2 my-md-0 text-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="nav-item text-dark py-1 mx-md-3 mx-xl-5 text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li class="my-2 my-md-0 text-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="nav-item text-dark py-1 mx-md-3 mx-xl-5 text-decoration-none"
+                  >Our rooms</a
+                >
+              </li>
+              <li class="my-2 my-md-0 text-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="nav-item text-dark py-1 mx-md-3 mx-xl-5 text-decoration-none"
+                  >Page</a
+                >
+              </li>
+              <li class="my-2 my-md-0 text-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="nav-item text-dark py-1 mx-md-3 mx-xl-5 text-decoration-none"
+                  >Feature</a
+                >
+              </li>
+              <li class="my-2 my-md-0 text-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="nav-item text-dark py-1 mx-md-3 mx-xl-5 text-decoration-none"
+                  >Blog</a
+                >
+              </li>
+              <li class="mt-2 my-md-0 text-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="nav-item text-dark py-1 mx-md-3 mx-xl-5 text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="header-items mt-md-2 mt-0 text-center nav-link">
+            <div class="dropdown">
+              <button
+                class="btn btn-light dropdown-toggle"
+                type="button"
+                id="dropdownMenu2"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                En
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <a class="dropdown-item" href="#">Bn</a>
+                <a class="dropdown-item" href="#">Hn</a>
+                <a class="dropdown-item" href="#">Tm</a>
+              </div>
+            </div>
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          </div>
+        </section>
+        <section name="aside1">
+          <div class="aside1">
+            <div class="enjoy-your-vacation">
+              <div class="heading">Enjoy your dream vacation</div>
+              <div class="quite-endless">
+                Quite and endlessly beautiful hideway
+              </div>
+              <a href="#" target="_blank" id="about-us">about us</a>
+            </div>
+            <div class="search-room">
+              <h2>Search Room</h2>
+              <p>Get the latest on our COVID-19 response</p>
+              <div class="date">
+                <div class="starting-date">
+                  <label for="start-date"
+                    ><i class="fa fa-calendar" aria-hidden="true"></i>Checkin
+                    <sup>*</sup></label
+                  >
+                  <input
+                    type="date"
+                    id="start"
+                    name="trip-start"
+                    value="2023-07-22"
+                    min="2023-01-01"
+                    max="2024-12-31"
+                  />
+                </div>
+                <div class="ending-date">
+                  <label for="end-date"
+                    ><i class="fa fa-calendar" aria-hidden="true"></i>Checkin
+                    <sup>*</sup></label
+                  >
+                  <input
+                    type="date"
+                    id="end"
+                    name="trip-ends"
+                    value="2023-07-22"
+                    min="2023-01-01"
+                    max="2025-12-31"
+                  />
+                </div>
+              </div>
+              <div class="adult">
+                <p><i class="fa fa-user" aria-hidden="true"></i>adults</p>
+                <select id="select-adult">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="child">
+                <p><i class="fas fa-child"></i>Children</p>
+                <select id="select-child">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <button id="check-availability">Check availability</button>
+            </div>
+          </div>
+        </section>
+        <section name="aside2">
+          <div class="aside2">
+            <div class="welcome">
+              <p>Welcome to</p>
+              <h2>The Mikalto Luxury & Comfort Homestay</h2>
+              <p>
+                Welcome to our five-star hotel inPuerto de la Cruz's old town. A
+                marvellous combination of architecture, design and contemporary
+                art. 32 rooms and 10 uniquely different suites ensure our
+                guests' stay is extra special.
+              </p>
+              <img
+                class="signature"
+                src="./images/signature.svg"
+                alt="signature"
+              />
+              <h5>MELINDA AMANDA - HOTEL MANAGER</h5>
+            </div>
+            <div class="three-images">
+              <img
+                class="welcome-images"
+                id="man-resort"
+                src="./images/manresort.jpeg"
+                alt="man-resort"
+              />
+              <img
+                class="welcome-images"
+                id="window"
+                src="./images/window-image.jpg"
+                alt="window"
+              />
+              <img
+                class="welcome-images"
+                id="tree-house"
+                src="./images/tree-house.jpeg"
+                alt="tree-house"
+              />
+            </div>
+          </div>
+        </section>
+        <section name="aside3"></section>
+        <section name="aside4">
+          <div class="why-choose-our-hotel">
+            <p id="why">Why choose our hotel ?</p>
+            <div class="facilities">
+              <div class="unique-cuisine">
+                <i class="fas fa-hamburger icon"></i>
+                <div class="unique-cuisine-txt">
+                  <h3>Unique cuisine</h3>
+                  <p>
+                    We use the best ingredients to make special and really tasty
+                    dishes. Choose what you want to eat every day. You order at
+                    the moment.
+                  </p>
+                </div>
+              </div>
+              <div class="yoga-and-gym">
+                <img id="yoga-icon" src="./images/yoga.png" alt="yoga" />
+                <div class="yoga-gym-txt">
+                  <h3>Yoga & Gym</h3>
+                  <p>
+                    Sauna and solarium, a fitness corner, bicycles and Mikalto
+                    Walking poles available. To stay in shape especially on
+                    vacation.
+                  </p>
+                </div>
+              </div>
+              <div class="perfect-location">
+                <img
+                  id="location-icon"
+                  src="./images/location.png"
+                  alt="yoga"
+                />
+                <div class="perfect-location-txt">
+                  <h3>Perfect Location</h3>
+                  <p>
+                    Sauna and solarium, a fitness corner, bicycles and Mikalto
+                    Walking poles available. To stay in shape especially on
+                    vacation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section name="aside5">
+          <div class="aside5">
+            <div class="other-activities">
+              <p class="orange-tags">OTHER ACTIVITIES</p>
+              <h2>Give yourself a smile- Smile & Wellness</h2>
+              <p>
+                Proin nec leo vel metus faucibus vehicula. Donec vulputate in
+                magna eget egestas. Aliquam ac facilisis ante, sit amet
+                tincidunt ante. Fusce dolor sapien, sodales at velit non,
+                lobortis volutpat ante. Integer porta molestie volutpat. Etiam
+                tristique, sem vitae tincidunt gravida, eros nulla dapibus
+                lacus, ut dapibus diam dui vel tortor.
+              </p>
+              <a href="#" target="_blank" id="explore">Explore more </a>
+            </div>
+            <div class="pool-image">
+              <img id="pool" src="./images/pool.png" alt="pool" />
+            </div>
+          </div>
+        </section>
+        <section name="aside6">
+          <div class="aside6">
+            <div class="tree-house-aside">
+              <img
+                id="tree-image"
+                src="./images/tree-house-aside5.png"
+                alt="tree-house"
+              />
+              <div class="reconnect-with-nature">
+                <p class="orange-tags">OTHER ACTIVITIES</p>
+                <h2>Give yourself a smile- Smile & Wellness</h2>
+                <p>
+                  The wilderness and authenticity of this tiny village nestled
+                  between steep mountain cliffs and miles and miles of beautiful
+                  beaches drew foreign visitors like a magnet.
+                </p>
+                <ul>
+                  <li class="list">Thermal water with ancient baths</li>
+                  <li class="list">Turkish bath</li>
+                  <li class="list">Turkish sauna</li>
+                  <li class="list">Relax and therapy massage</li>
+                </ul>
+                <a href="#" target="_blank"
+                  ><button id="book-your-stay">book your stay</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section name="aside7">
+          <center id="experience">EXPERIENCE MATTERS</center>
+          <center id="escape">
+            Escape from the World see the experience before you feel it.
+            Discover the luxury of Hotel Mikalto
+          </center>
+          <div class="experience-type">
+            <div class="card">
+              <img src="./images/massage.png" alt="" />
+              <p class="experience-name" id="wellness">WELLNESS</p>
+              <p class="experience-heading" id="dedicated">
+                Dedicated to wellness
+              </p>
+              <p>
+                Proin nec leo vel metus faucibus vehicula. Donec vulputate in
+                magna eget egestas. Aliquam ac facilisis ante, sit amet
+                tincidunt ante. Fusce dolor sapien, sodales at velit non,
+                lobortis volutpat ante. Integer porta molestie volutpat. Etiam
+                tristique, sem vitae tincidunt gravida, eros nulla dapibus
+                lacus, ut dapibus diam dui vel tortor.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./images/massage.png" alt="" />
+              <p class="experience-name" id="wellness">WELLNESS</p>
+              <p class="experience-heading" id="dedicated">
+                Dedicated to wellness
+              </p>
+              <p>
+                Proin nec leo vel metus faucibus vehicula. Donec vulputate in
+                magna eget egestas. Aliquam ac facilisis ante, sit amet
+                tincidunt ante. Fusce dolor sapien, sodales at velit non,
+                lobortis volutpat ante. Integer porta molestie volutpat. Etiam
+                tristique, sem vitae tincidunt gravida, eros nulla dapibus
+                lacus, ut dapibus diam dui vel tortor.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./images/massage.png" alt="" />
+              <p class="experience-name" id="wellness">WELLNESS</p>
+              <p class="experience-heading" id="dedicated">
+                Dedicated to wellness
+              </p>
+              <p>
+                Proin nec leo vel metus faucibus vehicula. Donec vulputate in
+                magna eget egestas. Aliquam ac facilisis ante, sit amet
+                tincidunt ante. Fusce dolor sapien, sodales at velit non,
+                lobortis volutpat ante. Integer porta molestie volutpat. Etiam
+                tristique, sem vitae tincidunt gravida, eros nulla dapibus
+                lacus, ut dapibus diam dui vel tortor.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./images/massage.png" alt="" />
+              <p class="experience-name" id="wellness">WELLNESS</p>
+              <p class="experience-heading" id="dedicated">
+                Dedicated to wellness
+              </p>
+              <p>
+                Proin nec leo vel metus faucibus vehicula. Donec vulputate in
+                magna eget egestas. Aliquam ac facilisis ante, sit amet
+                tincidunt ante. Fusce dolor sapien, sodales at velit non,
+                lobortis volutpat ante. Integer porta molestie volutpat. Etiam
+                tristique, sem vitae tincidunt gravida, eros nulla dapibus
+                lacus, ut dapibus diam dui vel tortor.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section name="aside8">
+          <div class="aside8">
+            <div class="say-hello">
+              <p class="say-hello-heading">
+                Say hello <br />
+                to a whole new you
+              </p>
+              <p>
+                Proin nec leo vel metus faucibus vehicula. Donec vulputate in
+                magna eget egestas. Aliquam ac facilisis ante, sit amet
+                tincidunt ante. Fusce dolor sapien, sodales at velit non,
+                lobortis volutpat ante. Integer porta molestie volutpat. Etiam
+                tristique, sem vitae tincidunt gravida, eros nulla dapibus
+                lacus, ut dapibus diam dui vel tortor.
+              </p>
+              <a id="discover" href="#" target="_blank">Discover more</a>
+            </div>
+          </div>
+        </section>
+        <section name="aside9">
+          <div class="aside9">
+            <div class="review">
+              <div class="image-name-date">
+                <img
+                  class="review-image"
+                  src="./images/lana-codor.jpeg"
+                  alt=""
+                />
+                <div class="name-date">
+                  <p class="review-name">Selena Mayer</p>
+                  <p class="review-date">2021-01-10</p>
+                  <p class="review-heading">Wondeerful new year trip</p>
+                  <p class="review-txt">
+                    "One of the best hotels I've ever stayed in. The staff are
+                    very friendly and helpful, they were so helpful it made me
+                    feel bad. It includes use of the Spa, wonderful, it has a...
+                  </p>
+                </div>
+                <img class="review-image" src="./images/owl.png" alt="owl" />
+              </div>
+              <div class="image-name-date">
+                <img
+                  class="review-image"
+                  src="./images/lana-codor.jpeg"
+                  alt=""
+                />
+                <div class="name-date">
+                  <p class="review-name">Selena Mayer</p>
+                  <p class="review-date">2021-01-10</p>
+                  <p class="review-heading">Wondeerful new year trip</p>
+                  <p class="review-txt">
+                    "One of the best hotels I've ever stayed in. The staff are
+                    very friendly and helpful, they were so helpful it made me
+                    feel bad. It includes use of the Spa, wonderful, it has a...
+                  </p>
+                </div>
+                <img class="review-image" src="./images/owl.png" alt="owl" />
+              </div>
+              <div class="image-name-date">
+                <img
+                  class="review-image"
+                  src="./images/lana-codor.jpeg"
+                  alt=""
+                />
+                <div class="name-date">
+                  <p class="review-name">Selena Mayer</p>
+                  <p class="review-date">2021-01-10</p>
+                  <p class="review-heading">Wondeerful new year trip</p>
+                  <p class="review-txt">
+                    "One of the best hotels I've ever stayed in. The staff are
+                    very friendly and helpful, they were so helpful it made me
+                    feel bad. It includes use of the Spa, wonderful, it has a...
+                  </p>
+                </div>
+                <img class="review-image" src="./images/owl.png" alt="owl" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section name="aside10">
+          <div class="aside10">
+            <div class="location">
+              <div class="location-getting-here">
+                <img src="./images/flower-image.png" alt="flower-image" />
+                <p>GETTING HERE</p>
+                <p class="how-to">How to get there</p>
+                <p>
+                  Cras vel sapien erat. Proin molestie malesuada sem, nec
+                  euismod metus luctus in. Aliquam eget nibh quis leo tempor
+                  congue. Integer accumsan sollicitudin vehicula
+                </p>
+              </div>
+              <div class="location-vehicle">
+                <div class="by-vehicle">
+                  <img src="./images/plane.png" alt="plane" />
+                  <div class="by-vehicle-txt">
+                    <p class="by-vehicle-heading">By plane</p>
+                    <p class="by-vehicle-paragraph">
+                      Donec vulputate in magna eget egestas. Aliquam ac
+                      facilisis ante, sit amet tincidunt ante. Fusce dolor
+                      sapien.
+                    </p>
+                  </div>
+                </div>
+                <div class="by-vehicle">
+                  <img src="./images/plane.png" alt="plane" />
+                  <div class="by-vehicle-txt">
+                    <p class="by-vehicle-heading">By plane</p>
+                    <p class="by-vehicle-paragraph">
+                      Donec vulputate in magna eget egestas. Aliquam ac
+                      facilisis ante, sit amet tincidunt ante. Fusce dolor
+                      sapien.
+                    </p>
+                  </div>
+                </div>
+                <div class="by-vehicle">
+                  <img src="./images/plane.png" alt="plane" />
+                  <div class="by-vehicle-txt">
+                    <p class="by-vehicle-heading">By plane</p>
+                    <p class="by-vehicle-paragraph">
+                      Donec vulputate in magna eget egestas. Aliquam ac
+                      facilisis ante, sit amet tincidunt ante. Fusce dolor
+                      sapien.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0437694976354!2d88.42922191495062!3d22.577466238481797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275a5466e0099%3A0x563fb49fb6394261!2sItobuz%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1680071318051!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+        <section name="aside11">
+          <div class="aside11">
+            <img id="bridge" src="./images/bridge.png" alt="bridge" />
+            <div class="home-jungle">
+              <img id="jungle" src="./images/home-jungle.png" alt="jungle" />
+              <img id="fern" src="./images/fern.png" alt="" />
+            </div>
+            <div class="spa-wellness">
+              <div class="spa-wellness-heading">
+                <p>SPA & WELLNESS</p>
+                <p class="side-by-side">Side by Side with Nature</p>
+                <p>
+                  Find harmony and balance from the inside out and outside in.
+                  Laborum accusantium libero commodi id officiis itaque esse
+                  adipisci, necessitatibus asperiores, illo odio.
+                </p>
+                <a href="#" target="_blank"
+                  ><button class="join-button">Join us</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section name="aside12">
+          <div class="aside12">
+            <center>STORIES DELOVRED STRAIGHT</center>
+            <center class="get">Get News & Update to Your Inbox</center>
+            <center>
+              <div class="subscribe">
+                <form>
+                  <input
+                    type="email"
+                    name=""
+                    id="email"
+                    placeholder="enter your email address..."
+                  />
+                  <input
+                    class="subscribe-button"
+                    type="submit"
+                    placeholder="Subscribe"
+                  />
+                </form>
+              </div>
+            </center>
+            <center>
+              Will be used in accordance with our
+              <a class="privacy" href="#" target="_blank">Privacy Policy</a>
+            </center>
+          </div>
+        </section>
+        <section name="aside13">
+          <img class="design" src="./images/design.png" alt="design" />
+        </section>
+        <section name="aside14">
+          <div class="aside14">
+            <div class="hotel-resorts">
+              <div class="mikalto-hotel">
+                <h2>MIKALTO</h2>
+                <h4>HOTELS & RESORTS</h4>
+                <p class="cras">
+                  Cras vel sapien erat. Proin molestie malesuada sem, nec
+                  euismod metus luctus in. Aliquam eget nibh quis leo tempor
+                  congue. Integer accumsan sollicitudin vehicula
+                </p>
+                <p class="follow">
+                  Follow us: <span><i class="fa-brands fa-facebook-f"></i></span
+                  ><span><i class="fa-brands fa-twitter"></i></span
+                  ><span><i class="fa-brands fa-instagram"></i></span
+                  ><span><i class="fa-brands fa-youtube"></i></span
+                  ><span><i class="fa-brands fa-pinterest"></i></span>
+                </p>
+              </div>
+            </div>
+            <div class="details">
+              <div class="about-options">
+                <p id="about">About</p>
+                <a class="links" href="#" target="_blank">About us</a>
+                <a class="links" href="#" target="_blank">Careers</a>
+                <a class="links" href="#" target="_blank">Contacts</a>
+                <a class="links" href="#" target="_blank">Blog</a>
+                <a class="links" href="#" target="_blank">Gift Cards</a>
+              </div>
+              <div class="about-options">
+                <p id="about">services</p>
+                <a class="links" href="#" target="_blank">spa</a>
+                <a class="links" href="#" target="_blank">experience</a>
+                <a class="links" href="#" target="_blank">Wedding</a>
+                <a class="links" href="#" target="_blank">Dining</a>
+                <a class="links" href="#" target="_blank">Event</a>
+              </div>
+              <div class="about-options">
+                <p id="about">Quick Links</p>
+                <a class="links" href="#" target="_blank">facilities</a>
+                <a class="links" href="#" target="_blank">Accomodation</a>
+                <a class="links" href="#" target="_blank">Reservation</a>
+                <a class="links" href="#" target="_blank">Why choose us</a>
+                <a class="links" href="#" target="_blank">Our restuarents</a>
+              </div>
+              <div class="about-options">
+                <p id="about">Contact us</p>
+                <p class="number">toll free customer services</p>
+                <p class="contact-number">(+123)1500</p>
+                <p class="number">need live support</p>
+                <p class="contact-number">(+123)1500</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script src="js/main.js"></script>
+      </body>
+    </html>
+  </head>
+</html>
