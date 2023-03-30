@@ -53,6 +53,26 @@ li {
   overflow: scroll;
   font-size: 1rem;
 }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .dropdown-toggle {
   display: none;
 }
@@ -77,6 +97,17 @@ li {
 }
 .quite-endless {
   font-size: 1.5rem;
+}
+.room-type {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  padding-top: 5%;
+  color: #fff;
+  background-color: #0f0c6b;
+}
+.room {
+  font-size: 3rem;
 }
 
 #about-us {
@@ -147,6 +178,9 @@ li {
 .adult,
 .child {
   padding-top: 10px;
+}
+.experience-image {
+  max-height: 300px;
 }
 #select-adult,
 #select-child {
@@ -386,7 +420,6 @@ iframe {
   margin-bottom: -20%;
 }
 #tree-house {
-  margin-bottom: -25%;
   margin-left: 15%;
   margin-right: -30%;
   margin-top: -10%;
@@ -462,6 +495,10 @@ iframe {
 
 .join-button:hover {
   opacity: 0.7;
+}
+.room-type {
+  color: #fff;
+  background-color: #0f0c6b;
 }
 .get {
   font-size: 3rem;
@@ -624,5 +661,11 @@ span {
   .spa-wellness {
     padding-top: 20%;
     padding-left: 5%;
+  }
+  .room-type {
+    flex-direction: row;
+  }
+  .swiper-slide{
+    flex-direction: row !important;
   }
 }
