@@ -61,14 +61,12 @@ li {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  display: flex;
-  flex-direction: column !important;
   justify-content: center;
   align-items: center;
 }
 
 .swiper-slide img {
-  display: block;
+  /* display: block; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -163,7 +161,6 @@ li {
   color: black;
   width: 90%;
   padding: 10px;
-  overflow: hidden;
   padding-bottom: 20px;
   margin-bottom: 30%;
 }
@@ -273,6 +270,7 @@ li {
 .aside6 {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 .other-activities,
 .reconnect-with-nature {
@@ -288,9 +286,9 @@ li {
   padding-right: 7%;
   padding-left: 7%;
 }
-.pool-image,
-.tree-house-aside {
-  width: 100%;
+.tree-house-aside{
+  display: flex;
+  flex-direction: column;
 }
 .orange-tags {
   color: orange;
@@ -404,8 +402,11 @@ iframe {
   font-size: 2rem;
 }
 
-#pool,
-#tree-image {
+img#pool{
+  width: 100%;
+  height: 100%;
+}
+img#tree-image {
   width: 100%;
 }
 #bridge {
@@ -433,7 +434,6 @@ iframe {
 #why {
   font-size: 3rem;
   padding-left: 5%;
-  padding-bottom: 5%;
 }
 #explore {
   color: rgb(255, 255, 255);
@@ -492,6 +492,10 @@ iframe {
   vertical-align: bottom;
   width: 190px;
 }
+.slide {
+  display: flex !important;
+  flex-direction: column !important;
+}
 
 .join-button:hover {
   opacity: 0.7;
@@ -518,36 +522,7 @@ iframe {
   padding-top: 40%;
   padding-left: 20%;
 }
-.subscribe-button {
-  align-items: center;
-  background-color: initial;
-  background-image: linear-gradient(
-    rgba(47, 49, 168, 0.84),
-    rgba(30, 0, 255, 0.84) 50%
-  );
-  border-width: 0;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
-    rgba(179, 132, 201, 0.4) 0 8px 12px;
-  color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  font-size: 18px;
-  font-weight: 700;
-  justify-content: center;
-  letter-spacing: 0.04em;
-  line-height: 16px;
-  margin: 0;
-  padding: 18px 18px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
-    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
-    rgba(57, 31, 91, 0.32) 4px 4px 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-}
+
 .aside14 {
   background-color: #0f0c6b;
   padding: 5%;
@@ -580,17 +555,33 @@ span {
   padding: 5px;
 }
 
-.subscribe-button:hover {
-  background-image: linear-gradient(#b384c9, #391f5b 50%);
-}
 .design {
   width: 100%;
 }
 .number {
   color: #8b8ab1;
 }
+
 .contact-number {
   color: white;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.privacy-tem-Sitemap {
+  display: flex;
+}
+.terms {
+  margin: 5%;
+}
+#browser {
+  height: 30px;
+  width: 30px;
+}
+.select-language {
+  padding-right: 5%;
 }
 @media (min-width: 768px) {
   .header-items {
@@ -603,7 +594,7 @@ span {
     align-items: center;
     justify-content: center;
     margin-top: 10%;
-    margin-left: 40%;
+    margin-left: 30%;
     margin-right: 15%;
   }
   .aside2 {
@@ -611,6 +602,7 @@ span {
   }
   .facilities {
     flex-direction: row;
+    padding-top: -10%;
   }
   .why-choose-our-hotel {
     padding-top: 10%;
@@ -637,8 +629,7 @@ span {
     flex-direction: row;
   }
   .subscribe-button {
-    font-size: 21px;
-    padding: 18px 34px;
+    color:black;
   }
   .join-button {
     font-size: 14px;
@@ -665,7 +656,34 @@ span {
   .room-type {
     flex-direction: row;
   }
-  .swiper-slide{
-    flex-direction: row !important;
+  .room-type-image {
+    width: 60% !important;
+  }
+  
+    .slide {
+      display: flex !important;
+      flex-direction: row !important;
+
+    }
+  .tree-house-aside {
+    flex-direction: row;
+  }
+  img#tree-image {
+    width: 50%;
+  }
+  .swiper-slide img {
+    padding-left: 10%;
+  }
+  .footer {
+    flex-direction: row;
+  }
+  .swiper-button-prev {
+    margin-left: 35%;
+  }
+  #about-us {
+    margin-left: -30%;
+  }
+  .why-choose-our-hotel {
+    padding-top: 5%;
   }
 }

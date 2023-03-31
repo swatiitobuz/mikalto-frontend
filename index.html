@@ -99,25 +99,13 @@
         </ul>
       </div>
       <div class="header-items mt-md-2 mt-0 text-center nav-link">
-        <div class="dropdown">
-          <button
-            class="btn btn-light dropdown-toggle"
-            type="button"
-            id="dropdownMenu2"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            En
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <a class="dropdown-item" href="#">Bn</a>
-            <a class="dropdown-item" href="#">Hn</a>
-            <a class="dropdown-item" href="#">Tm</a>
-          </div>
-        </div>
-        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        <select id="language">
+          <option value="english">Eng</option>
+          <option value="bengali">Ben</option>
+          <option value="hindi">Hin</option>
+        </select>
       </div>
+      <i class="fa fa-shopping-bag" aria-hidden="true"></i>
     </section>
     <section name="aside1">
       <div class="aside1">
@@ -129,57 +117,63 @@
         <div class="search-room">
           <h2>Search Room</h2>
           <p>Get the latest on our COVID-19 response</p>
-          <div class="date">
-            <div class="starting-date">
-              <label for="start-date"
-                ><i class="fa fa-calendar" aria-hidden="true"></i>Checkin
-                <sup>*</sup></label
-              >
-              <input
-                type="date"
-                id="start"
-                name="trip-start"
-                value="2023-07-22"
-                min="2023-01-01"
-                max="2024-12-31"
-              />
+          <form action="">
+            <div class="date">
+              <div class="starting-date">
+                <label for="start-date"
+                  ><i class="fa fa-calendar" aria-hidden="true"></i>Check in
+                  <sup>*</sup></label
+                >
+                <input
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2023-07-22"
+                  min="2023-01-01"
+                  max="2024-12-31"
+                />
+              </div>
+              <div class="ending-date">
+                <label for="end-date"
+                  ><i class="fa fa-calendar" aria-hidden="true"></i>Check out
+                  <sup>*</sup></label
+                >
+                <input
+                  type="date"
+                  id="end"
+                  name="trip-ends"
+                  value="2023-07-22"
+                  min="2023-01-01"
+                  max="2025-12-31"
+                />
+              </div>
             </div>
-            <div class="ending-date">
-              <label for="end-date"
-                ><i class="fa fa-calendar" aria-hidden="true"></i>Checkin
-                <sup>*</sup></label
-              >
-              <input
-                type="date"
-                id="end"
-                name="trip-ends"
-                value="2023-07-22"
-                min="2023-01-01"
-                max="2025-12-31"
-              />
+            <div class="adult">
+              <p><i class="fa fa-user" aria-hidden="true"></i>adults</p>
+              <select id="select-adult">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
-          </div>
-          <div class="adult">
-            <p><i class="fa fa-user" aria-hidden="true"></i>adults</p>
-            <select id="select-adult">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <div class="child">
-            <p><i class="fas fa-child"></i>Children</p>
-            <select id="select-child">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <button id="check-availability">Check availability</button>
+            <div class="child">
+              <p><i class="fas fa-child"></i>Children</p>
+              <select id="select-child">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <input
+              id="check-availability"
+              type="submit"
+              value="Check availability"
+            />
+          </form>
         </div>
       </div>
     </section>
@@ -223,7 +217,7 @@
       <div class="room-type">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide slide">
               <div class="room-details">
                 <p class="orange-tags">ELEGANCE AND COMFORT</p>
                 <p class="room"></p>
@@ -231,12 +225,12 @@
                 <p class="room-text"></p>
                 <p>Bed: <span class="bed"></span></p>
                 <p>Capasity: <span class="capasity"></span></p>
-                <p>Room size: <span class="room-size"></span></p>
+                <p>Room size: <span class="room-size"></span> sqm</p>
                 <p>View: <span class="view"></span></p>
               </div>
               <img class="room-type-image" src="" alt="standardRoom" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide slide">
               <div class="room-details">
                 <p class="orange-tags">ELEGANCE AND COMFORT</p>
                 <p class="room"></p>
@@ -244,16 +238,12 @@
                 <p class="room-text"></p>
                 <p>Bed: <span class="bed"></span></p>
                 <p>Capasity: <span class="capasity"></span></p>
-                <p>Room size: <span class="room-size"></span></p>
+                <p>Room size: <span class="room-size"></span> sqm</p>
                 <p>View: <span class="view"></span></p>
               </div>
-              <img
-                class="room-type-image"
-                src=""
-                alt="deluxRoom"
-              />
+              <img class="room-type-image" src="" alt="deluxRoom" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide slide">
               <div class="room-details">
                 <p class="orange-tags">ELEGANCE AND COMFORT</p>
                 <p class="room"></p>
@@ -261,16 +251,12 @@
                 <p class="room-text"></p>
                 <p>Bed: <span class="bed"></span></p>
                 <p>Capasity: <span class="capasity"></span></p>
-                <p>Room size: <span class="room-size"></span></p>
+                <p>Room size: <span class="room-size"></span> sqm</p>
                 <p>View: <span class="view"></span></p>
               </div>
-              <img
-                class="room-type-image"
-                src=""
-                alt="superiorRoom"
-              />
+              <img class="room-type-image" src="" alt="superiorRoom" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide slide">
               <div class="room-details">
                 <p class="orange-tags">ELEGANCE AND COMFORT</p>
                 <p class="room"></p>
@@ -278,14 +264,10 @@
                 <p class="room-text"></p>
                 <p>Bed: <span class="bed"></span></p>
                 <p>Capasity: <span class="capasity"></span></p>
-                <p>Room size: <span class="room-size"></span></p>
+                <p>Room size: <span class="room-size"></span> sqm</p>
                 <p>View: <span class="view"></span></p>
               </div>
-              <img
-                class="room-type-image"
-                src=""
-                alt="superSuperiorRoom"
-              />
+              <img class="room-type-image" src="" alt="superSuperiorRoom" />
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -577,11 +559,7 @@
                 id="email"
                 placeholder="enter your email address..."
               />
-              <input
-                class="subscribe-button"
-                type="submit"
-                placeholder="Subscribe"
-              />
+              <input class="subscribe-button" type="submit" value="Subscribe" />
             </form>
           </div>
         </center>
@@ -646,6 +624,25 @@
             <p class="number">need live support</p>
             <p class="contact-number">(+123)1500</p>
           </div>
+        </div>
+      </div>
+    </section>
+    <section name="footer">
+      <hr />
+      <div class="footer">
+        <p class="copy-right">Copyright @2022 Mikalto JWS.</p>
+        <div class="privacy-tem-Sitemap">
+          <p class="terms">Privacy</p>
+          <p class="terms">Terms</p>
+          <p class="terms">Sitemap</p>
+        </div>
+        <div class="select-language">
+          <img id="browser" src="./images/browser.jpeg" alt="browser" />
+          <select id="language">
+            <option value="english">Eng</option>
+            <option value="bengali">Ben</option>
+            <option value="hindi">Hin</option>
+          </select>
         </div>
       </div>
     </section>

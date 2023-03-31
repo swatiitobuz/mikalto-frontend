@@ -16,7 +16,6 @@ const roomText = document.querySelectorAll(".room-text");
 const bed = document.querySelectorAll(".bed");
 const roomTypeImage = document.querySelectorAll(".room-type-image");
 
-
 menuIcon.addEventListener("click", function () {
   for (let i = 0; i < navbarLink.length; i++) {
     navbarLink[i].classList.remove("header-items");
@@ -95,16 +94,17 @@ let getRoomData = () => {
   let res = fetchRoomData()
     .then((response) => {
       console.log(response);
-      for(let i = 0;i < response.roomData.length;i++){
-          room[i].innerHTML = response.roomData[i].name;
-          console.log(response.roomData[i].type.price);
-          price[i].innerHTML = response.roomData[i].type.price;
-          capasity[i].innerHTML = response.roomData[i].type.capasity;
-          bed[i].innerHTML = response.roomData[i].type.bed;
-          console.log(response.roomData[i].type.bed_size);
-          roomSize[i].innerHTML = response.roomData[i].type.bed_size;
+      for (let i = 0; i < response.roomData.length; i++) {
+        room[i].innerHTML = response.roomData[i].name;
+        console.log(response.roomData[i].type.price);
+        price[i].innerHTML = response.roomData[i].type.price;
+        capasity[i].innerHTML = response.roomData[i].type.capasity;
+        bed[i].innerHTML = response.roomData[i].type.bed;
+        console.log(response.roomData[i].type.bed_size);
+        roomSize[i].innerHTML = response.roomData[i].type.room_size;
+        roomTypeImage[i].src = response.roomData[i].imgUrl;
+        view[i].innerHTML = response.roomData[i].type.view;
       }
-      
     })
     .catch((err) => {
       console.log(err);
