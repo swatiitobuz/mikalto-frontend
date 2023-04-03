@@ -104,52 +104,55 @@
           <option value="bengali">Ben</option>
           <option value="hindi">Hin</option>
         </select>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
       </div>
-      <i class="fa fa-shopping-bag" aria-hidden="true"></i>
     </section>
     <section name="aside1">
       <div class="aside1">
         <div class="enjoy-your-vacation">
           <div class="heading">Enjoy your dream vacation</div>
           <div class="quite-endless">Quite and endlessly beautiful hideway</div>
-          <a href="#" target="_blank" id="about-us">about us</a>
+          <div class="query">
+            <a href="#" target="_blank" id="about-us">About Us</a>
+            <a href="#" id="view-homestay">View homestay <span>&#x2192</span></a>
+          </div>
         </div>
         <div class="search-room">
           <h2>Search Room</h2>
-          <p>Get the latest on our COVID-19 response</p>
-          <form action="">
+          <p class="get-the">Get the latest on our COVID-19 response</p>
+          <form action="" onsubmit="formSubmit(event)">
             <div class="date">
               <div class="starting-date">
                 <label for="start-date"
-                  ><i class="fa fa-calendar" aria-hidden="true"></i>Check in
+                  ><i class="fa fa-calendar" aria-hidden="true"></i> Check in
                   <sup>*</sup></label
                 >
                 <input
                   type="date"
                   id="start"
                   name="trip-start"
-                  value="2023-07-22"
-                  min="2023-01-01"
+                  placeholder="Check-in Date"
+                  min="2023-04-03"
                   max="2024-12-31"
                 />
               </div>
               <div class="ending-date">
                 <label for="end-date"
-                  ><i class="fa fa-calendar" aria-hidden="true"></i>Check out
+                  ><i class="fa fa-calendar" aria-hidden="true"></i> Check out
                   <sup>*</sup></label
                 >
                 <input
                   type="date"
                   id="end"
                   name="trip-ends"
-                  value="2023-07-22"
-                  min="2023-01-01"
+                  placeholder="Check-out Date"
+                  min="2023-04-04"
                   max="2025-12-31"
                 />
               </div>
             </div>
             <div class="adult">
-              <p><i class="fa fa-user" aria-hidden="true"></i>adults</p>
+              <p><i class="fa fa-user" aria-hidden="true"></i> adults</p>
               <select id="select-adult">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -159,8 +162,9 @@
               </select>
             </div>
             <div class="child">
-              <p><i class="fas fa-child"></i>Children</p>
+              <p><i class="fas fa-child"></i> Children</p>
               <select id="select-child">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -376,26 +380,31 @@
           <p class="experience-name" id="wellness"></p>
           <p class="experience-heading" id="dedicated"></p>
           <p class="textValue"></p>
+          <a class="discover" href="#" target="_blank">Discover more <span>&#x2192</span></a>
         </div>
         <div class="card" id="card2">
           <img class="experience-image" src="" alt="swing-image" />
           <p class="experience-name" id="wellness"></p>
           <p class="experience-heading" id="dedicated"></p>
           <p class="textValue"></p>
+          <a class="discover" href="#" target="_blank">Discover more <span>&#x2192</span></a>
         </div>
         <div class="card" id="card3">
           <img class="experience-image" src="" alt="shop-image" />
           <p class="experience-name" id="wellness"></p>
           <p class="experience-heading" id="dedicated"></p>
           <p class="textValue"></p>
+          <a class="discover" href="#" target="_blank">Discover more <span>&#x2192</span></a>
         </div>
         <div class="card" id="card4">
           <img class="experience-image" src="" alt="experience" />
           <p class="experience-name" id="wellness"></p>
           <p class="experience-heading" id="dedicated"></p>
           <p class="textValue"></p>
+          <a class="discover" href="#" target="_blank">Discover more <span>&#x2192</span></a>
         </div>
       </div>
+      <button class="view-all" type="submit">view all activities</button>
     </section>
     <section name="aside8">
       <div class="aside8">
@@ -412,7 +421,7 @@
             tincidunt gravida, eros nulla dapibus lacus, ut dapibus diam dui vel
             tortor.
           </p>
-          <a id="discover" href="#" target="_blank">Discover more</a>
+          <a class="discover" href="#" target="_blank">Discover more <span>&#x2192</span></a>
         </div>
       </div>
     </section>
@@ -556,14 +565,14 @@
         <center class="get">Get News & Update to Your Inbox</center>
         <center>
           <div class="subscribe">
-            <form>
+            <form onsubmit="submitMail()">
               <input
                 type="email"
                 name=""
                 id="email"
                 placeholder="enter your email address..."
               />
-              <input class="subscribe-button" type="submit" value="Subscribe" />
+              <button class="join-button" type="submit">Submit</button>
             </form>
           </div>
         </center>

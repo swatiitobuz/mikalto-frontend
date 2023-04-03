@@ -2,6 +2,10 @@ const navbarLink = document.getElementsByClassName("nav-link");
 const menuIcon = document.getElementById("menu-icon");
 const closeIcon = document.getElementById("close-icon");
 const listItems = document.querySelector("ul");
+const checkInDate = document.querySelector("#start");
+const checkOutDate = document.querySelector("#end");
+const adultCount = document.querySelector("#select-adult");
+const childCount = document.querySelector("#select-child");
 let urlApi = "";
 const wellness = document.querySelectorAll(".experience-name");
 const heading = document.querySelectorAll(".experience-heading");
@@ -15,6 +19,8 @@ const view = document.querySelectorAll(".view");
 const roomText = document.querySelectorAll(".room-text");
 const bed = document.querySelectorAll(".bed");
 const roomTypeImage = document.querySelectorAll(".room-type-image");
+
+//header menu
 
 menuIcon.addEventListener("click", function () {
   for (let i = 0; i < navbarLink.length; i++) {
@@ -31,18 +37,8 @@ closeIcon.addEventListener("click", () => {
   closeIcon.classList.add("header-items");
 });
 
-function dropDown() {
-  listItems.classList.toggle("dropdown-toggle");
-}
+//swiper slider
 
-let items = document.querySelectorAll("#list li");
-for (let i = 0; i < items.length; i++) {
-  items[i].onclick = function () {
-    document.getElementById("language").value = this.innerHTML;
-    console.log(this.innerHTML);
-    dropDown();
-  };
-}
 let swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -50,10 +46,13 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
+//card data
+
 async function fetchCardData() {
   const response = await fetch(urlApi);
   return response.json();
 }
+
 let getCardData = () => {
   urlApi = "http://127.0.0.1:3000/";
 
@@ -82,7 +81,10 @@ let getCardData = () => {
       console.log(err);
     });
 };
+
 getCardData();
+
+//room type data
 
 async function fetchRoomData() {
   const response = await fetch(urlApi);
@@ -110,4 +112,24 @@ let getRoomData = () => {
       console.log(err);
     });
 };
+
 getRoomData();
+
+function formSubmit(event){
+  event.preventDefault();
+  alert("working");
+  fetch("http://localhost:5000/", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: `{
+      id:${Date.now()},
+      checkInDate:${checkInDate.value},
+      checkOutDate:${checkOutDate.value},
+      noOfAdults:${adultCount.value},
+      noOfChildren:${childCount.value}}`
+  }).catch(error => {
+    console.log(error);
+  })
+}
