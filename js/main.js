@@ -54,7 +54,7 @@ async function fetchCardData() {
 }
 
 let getCardData = () => {
-  urlApi = "http://127.0.0.1:3000/";
+  urlApi = "http://127.0.0.1:3000/card";
 
   let res = fetchCardData()
     .then((response) => {
@@ -91,7 +91,7 @@ async function fetchRoomData() {
   return await response.json();
 }
 let getRoomData = () => {
-  urlApi = "http://localhost:3001/";
+  urlApi = "http://localhost:3001";
 
   let res = fetchRoomData()
     .then((response) => {
@@ -115,10 +115,10 @@ let getRoomData = () => {
 
 getRoomData();
 
-function formSubmit(event){
+function formSubmit(event) {
   event.preventDefault();
   alert("working");
-  fetch("http://localhost:5000/", {
+  fetch("http://localhost:5000", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -128,8 +128,8 @@ function formSubmit(event){
       checkInDate:${checkInDate.value},
       checkOutDate:${checkOutDate.value},
       noOfAdults:${adultCount.value},
-      noOfChildren:${childCount.value}}`
-  }).catch(error => {
+      noOfChildren:${childCount.value}}`,
+  }).catch((error) => {
     console.log(error);
-  })
+  });
 }
